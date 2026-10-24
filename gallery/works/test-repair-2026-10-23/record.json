@@ -1,0 +1,23 @@
+{
+  "ai_generated": true,
+  "date": "2026-10-23",
+  "id": "test-repair-2026-10-23",
+  "image": {
+    "file": "artwork.png",
+    "height": 941,
+    "sha256": "c295569965363a5ddb8147e57ef63e6bf7235ad894c74d9a46a70102bd6e6298",
+    "width": 1672
+  },
+  "kind": "test",
+  "research": {
+    "sources": [
+      {
+        "label": "Published research",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/41233339/"
+      }
+    ],
+    "summary": "A pointillist field of emerging clusters imagines neonatal liver growth at the organ’s edge."
+  },
+  "schema_version": 1,
+  "title": "A Growing Margin"
+}

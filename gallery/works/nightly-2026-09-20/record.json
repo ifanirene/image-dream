@@ -1,0 +1,23 @@
+{
+  "ai_generated": true,
+  "date": "2026-09-20",
+  "id": "nightly-2026-09-20",
+  "image": {
+    "file": "artwork.png",
+    "height": 941,
+    "sha256": "edddf0d727e00e9fd8ce48dded2bc1853a312b1347e4cd7f17947db30fbda02e",
+    "width": 1672
+  },
+  "kind": "nightly",
+  "research": {
+    "sources": [
+      {
+        "label": "Published research",
+        "url": "https://doi.org/10.1038/s41591-025-03831-3"
+      }
+    ],
+    "summary": "Two ceramic basins become paired tides, inspired by protein-specific differences between cerebrospinal fluid and plasma."
+  },
+  "schema_version": 1,
+  "title": "The Paired Tides"
+}

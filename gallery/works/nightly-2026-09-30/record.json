@@ -1,0 +1,18 @@
+{
+  "ai_generated": true,
+  "date": "2026-09-30",
+  "id": "nightly-2026-09-30",
+  "image": {
+    "file": "artwork.png",
+    "height": 941,
+    "sha256": "f0a5f015d61bf659aa6dae7210d569e6d8a9e7f0b9613b1750a9aa76513839fb",
+    "width": 1672
+  },
+  "kind": "nightly",
+  "research": {
+    "sources": [],
+    "summary": "A pale sentinel beside a frayed red wall imagines immune cells and vascular injury, without assigning a causal direction."
+  },
+  "schema_version": 1,
+  "title": "The Witness at the Red Wall"
+}

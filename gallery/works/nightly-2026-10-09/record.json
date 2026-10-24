@@ -1,0 +1,23 @@
+{
+  "ai_generated": true,
+  "date": "2026-10-09",
+  "id": "nightly-2026-10-09",
+  "image": {
+    "file": "artwork.png",
+    "height": 941,
+    "sha256": "2076ae5676623df76d6870057978dd02629385fb02fb3f0d75a39e6ea07db7fb",
+    "width": 1672
+  },
+  "kind": "nightly",
+  "research": {
+    "sources": [
+      {
+        "label": "Published research",
+        "url": "https://doi.org/10.1161/CIRCRESAHA.119.316463"
+      }
+    ],
+    "summary": "An intact wall surrounds a fading orchard, inspired by research separating glucose transport from measured blood–brain barrier leakage."
+  },
+  "schema_version": 1,
+  "title": "The Orchard Behind the Unbroken Wall"
+}

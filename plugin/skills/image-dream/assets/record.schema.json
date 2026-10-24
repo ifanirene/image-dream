@@ -1,0 +1,116 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "title",
+    "date",
+    "kind",
+    "research",
+    "schema_version",
+    "ai_generated",
+    "image"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9-]{0,95}$"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 160
+    },
+    "date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date"
+    },
+    "kind": {
+      "enum": [
+        "nightly",
+        "test",
+        "manual",
+        "legacy"
+      ]
+    },
+    "research": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "summary",
+        "sources"
+      ],
+      "properties": {
+        "summary": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2000
+        },
+        "sources": {
+          "type": "array",
+          "maxItems": 8,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "label",
+              "url"
+            ],
+            "properties": {
+              "label": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 250
+              },
+              "url": {
+                "type": "string",
+                "format": "uri",
+                "pattern": "^https://",
+                "maxLength": 1500
+              }
+            }
+          }
+        }
+      }
+    },
+    "schema_version": {
+      "const": 1
+    },
+    "ai_generated": {
+      "const": true
+    },
+    "image": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "file",
+        "width",
+        "height",
+        "sha256"
+      ],
+      "properties": {
+        "file": {
+          "const": "artwork.png"
+        },
+        "width": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 16384
+        },
+        "height": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 16384
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        }
+      }
+    }
+  }
+}

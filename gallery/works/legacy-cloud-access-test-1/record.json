@@ -1,0 +1,18 @@
+{
+  "ai_generated": true,
+  "date": null,
+  "id": "legacy-cloud-access-test-1",
+  "image": {
+    "file": "artwork.png",
+    "height": 1457,
+    "sha256": "65fe9b3bcfe2856c72f8f52a722cad82fb4d8d59a732589706d0e03a31885613",
+    "width": 1080
+  },
+  "kind": "test",
+  "research": {
+    "sources": [],
+    "summary": "An early conceptual rendering of the heart, small vessels and surrounding cells, retained from the cloud image-access tests. Original title, exact date and source attribution were not recovered; this is an archival title."
+  },
+  "schema_version": 1,
+  "title": "Vascular Forms — Early Test 1"
+}

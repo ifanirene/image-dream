@@ -1,0 +1,23 @@
+{
+  "ai_generated": true,
+  "date": "2026-10-02",
+  "id": "nightly-2026-10-02",
+  "image": {
+    "file": "artwork.png",
+    "height": 941,
+    "sha256": "67c79906379e99974345067190571b8fa4cc980869fb817efcb0b8ccc1c798c1",
+    "width": 1672
+  },
+  "kind": "nightly",
+  "research": {
+    "sources": [
+      {
+        "label": "Published research",
+        "url": "https://doi.org/10.1093/eurheartj/ehag127"
+      }
+    ],
+    "summary": "A vellum fold and botanical navigator imagine the coordination of cells as new blood vessels develop."
+  },
+  "schema_version": 1,
+  "title": "The Unfinished Guide"
+}

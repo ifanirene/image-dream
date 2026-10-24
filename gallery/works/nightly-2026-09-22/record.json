@@ -1,0 +1,23 @@
+{
+  "ai_generated": true,
+  "date": "2026-09-22",
+  "id": "nightly-2026-09-22",
+  "image": {
+    "file": "artwork.png",
+    "height": 941,
+    "sha256": "978bc92f79954f1ebaa3438b023fcf6849f43f6a103263db2ff38f24455628d3",
+    "width": 1672
+  },
+  "kind": "nightly",
+  "research": {
+    "sources": [
+      {
+        "label": "Published research",
+        "url": "https://doi.org/10.1038/s41586-025-09987-9"
+      }
+    ],
+    "summary": "Protein constellations echo between a neuronal arbor and a microglial figure, inspired by research on neuron-derived proteins in microglia."
+  },
+  "schema_version": 1,
+  "title": "The Borrowed Constellations"
+}

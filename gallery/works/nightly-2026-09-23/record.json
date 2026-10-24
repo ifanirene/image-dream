@@ -1,0 +1,23 @@
+{
+  "ai_generated": true,
+  "date": "2026-09-23",
+  "id": "nightly-2026-09-23",
+  "image": {
+    "file": "artwork.png",
+    "height": 941,
+    "sha256": "9d1032d3533220bff04da20bbdaf242395043dac93a516d5974eaaf325d038ef",
+    "width": 1672
+  },
+  "kind": "nightly",
+  "research": {
+    "sources": [
+      {
+        "label": "Published research",
+        "url": "https://doi.org/10.1016/j.cell.2023.07.015"
+      }
+    ],
+    "summary": "A luminous reef imagines the distinct vascular and epithelial interfaces of the choroid plexus."
+  },
+  "schema_version": 1,
+  "title": "The Second Shore"
+}

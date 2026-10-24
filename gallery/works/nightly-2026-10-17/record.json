@@ -1,0 +1,18 @@
+{
+  "ai_generated": true,
+  "date": "2026-10-17",
+  "id": "nightly-2026-10-17",
+  "image": {
+    "file": "artwork.png",
+    "height": 941,
+    "sha256": "4af5785e3bedfbb6571382f26d348a9d358c2c732be932f874cb04103f4813ef",
+    "width": 1672
+  },
+  "kind": "nightly",
+  "research": {
+    "sources": [],
+    "summary": "A sunlit ceramic canyon crossed by fine strands imagines material connections that persist across an open fracture."
+  },
+  "schema_version": 1,
+  "title": "After the Fracture"
+}

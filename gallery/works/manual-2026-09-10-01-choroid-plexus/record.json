@@ -1,0 +1,18 @@
+{
+  "ai_generated": true,
+  "date": "2026-09-10",
+  "id": "manual-2026-09-10-01-choroid-plexus",
+  "image": {
+    "file": "artwork.png",
+    "height": 941,
+    "sha256": "ad26cbc6651aa2015151fd10a2308e8742033258d1bc825db5a5ffaa729b93a8",
+    "width": 1672
+  },
+  "kind": "manual",
+  "research": {
+    "sources": [],
+    "summary": "A layered-paper fold imagines the choroid plexus and its tissue interfaces."
+  },
+  "schema_version": 1,
+  "title": "The Quiet Interface"
+}

@@ -1,0 +1,23 @@
+{
+  "ai_generated": true,
+  "date": "2026-09-18",
+  "id": "nightly-2026-09-18",
+  "image": {
+    "file": "artwork.png",
+    "height": 941,
+    "sha256": "4bdde88c1b7314de404f7c3d5d2e216e174963fd0fea1148ef08d4d65874c602",
+    "width": 1672
+  },
+  "kind": "nightly",
+  "research": {
+    "sources": [
+      {
+        "label": "Published research",
+        "url": "https://doi.org/10.1038/s41586-025-08589-9"
+      }
+    ],
+    "summary": "An embroidered inner garden imagines age-related changes in the glycocalyx, the molecular layer lining blood vessels."
+  },
+  "schema_version": 1,
+  "title": "The Inner Garden"
+}

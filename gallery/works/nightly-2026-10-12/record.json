@@ -1,0 +1,27 @@
+{
+  "ai_generated": true,
+  "date": "2026-10-12",
+  "id": "nightly-2026-10-12",
+  "image": {
+    "file": "artwork.png",
+    "height": 941,
+    "sha256": "623355634e52420bd0d4ac9e07948118e77569b7c0a92217e8952c9087ee33f8",
+    "width": 1672
+  },
+  "kind": "nightly",
+  "research": {
+    "sources": [
+      {
+        "label": "Published research",
+        "url": "https://doi.org/10.7554/eLife.62873"
+      },
+      {
+        "label": "Published research",
+        "url": "https://doi.org/10.1128/MCB.00663-19"
+      }
+    ],
+    "summary": "An Art Nouveau procession imagines context-dependent partnering in developmental gene regulation, inspired by TWIST1 studies."
+  },
+  "schema_version": 1,
+  "title": "The Company of Becoming"
+}

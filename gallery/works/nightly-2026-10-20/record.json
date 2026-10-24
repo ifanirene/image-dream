@@ -1,0 +1,23 @@
+{
+  "ai_generated": true,
+  "date": "2026-10-20",
+  "id": "nightly-2026-10-20",
+  "image": {
+    "file": "artwork.png",
+    "height": 941,
+    "sha256": "903a507d35ae628081351d6293449b148bf1f32a5e6fd2aa19087334d4598fce",
+    "width": 1672
+  },
+  "kind": "nightly",
+  "research": {
+    "sources": [
+      {
+        "label": "Published research",
+        "url": "https://doi.org/10.1016/j.neuron.2020.08.024"
+      }
+    ],
+    "summary": "A seated dancer with exploratory arm traces imagines immune cells whose bodies remain relatively still while their processes move."
+  },
+  "schema_version": 1,
+  "title": "The Reach of Stillness"
+}

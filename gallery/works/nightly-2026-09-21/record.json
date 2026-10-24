@@ -1,0 +1,23 @@
+{
+  "ai_generated": true,
+  "date": "2026-09-21",
+  "id": "nightly-2026-09-21",
+  "image": {
+    "file": "artwork.png",
+    "height": 941,
+    "sha256": "4e750887000ae6188a6febe01f712177b254ea249175516f4cf5ff0dbecde038",
+    "width": 1672
+  },
+  "kind": "nightly",
+  "research": {
+    "sources": [
+      {
+        "label": "Research preprint",
+        "url": "https://doi.org/10.64898/2026.04.29.721711"
+      }
+    ],
+    "summary": "Layered paper bridges imagine collateral artery connections, inspired by experimental work on vascular growth."
+  },
+  "schema_version": 1,
+  "title": "Bridges in the Fold"
+}

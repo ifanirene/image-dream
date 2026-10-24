@@ -1,0 +1,23 @@
+{
+  "ai_generated": true,
+  "date": "2026-10-13",
+  "id": "nightly-2026-10-13",
+  "image": {
+    "file": "artwork.png",
+    "height": 941,
+    "sha256": "255e19e5a0d4b48531753793afb76e27c4ac3717f2d8e1f51e98aa86c69adc2d",
+    "width": 1672
+  },
+  "kind": "nightly",
+  "research": {
+    "sources": [
+      {
+        "label": "Published research",
+        "url": "https://doi.org/10.1038/s41467-017-01742-7"
+      }
+    ],
+    "summary": "A sparse field of color imagines how mechanical shear can help endothelial cells stop cycling and acquire arterial features."
+  },
+  "schema_version": 1,
+  "title": "The Current That Teaches Stillness"
+}

@@ -1,0 +1,18 @@
+{
+  "ai_generated": true,
+  "date": "2026-09-29",
+  "id": "nightly-2026-09-29",
+  "image": {
+    "file": "artwork.png",
+    "height": 940,
+    "sha256": "8a0ef206f92fdf3b4a28092ead0e47fafe84a8d9b2c00d939ebe513d16ddaf73",
+    "width": 1672
+  },
+  "kind": "nightly",
+  "research": {
+    "sources": [],
+    "summary": "A silk field imagines cells in relation to their neighbors, inspired by spatial approaches to studying tissue organization."
+  },
+  "schema_version": 1,
+  "title": "The Listening Field"
+}

@@ -1,0 +1,23 @@
+{
+  "ai_generated": true,
+  "date": "2026-10-03",
+  "id": "nightly-2026-10-03",
+  "image": {
+    "file": "artwork.png",
+    "height": 941,
+    "sha256": "e69618feaf9f57e1af9be53c8c9a4e4cab83d21785e2185537e5c753e30d46e2",
+    "width": 1672
+  },
+  "kind": "nightly",
+  "research": {
+    "sources": [
+      {
+        "label": "Published research",
+        "url": "https://doi.org/10.1038/s41591-025-03831-3"
+      }
+    ],
+    "summary": "A tilted glass-and-brass mobile imagines a reported association between protein structure and cerebrospinal-fluid–plasma balance."
+  },
+  "schema_version": 1,
+  "title": "The Fold That Tilts the Light"
+}

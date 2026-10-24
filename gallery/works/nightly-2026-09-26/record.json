@@ -1,0 +1,23 @@
+{
+  "ai_generated": true,
+  "date": "2026-09-26",
+  "id": "nightly-2026-09-26",
+  "image": {
+    "file": "artwork.png",
+    "height": 941,
+    "sha256": "e9f76e6d91c1286cfad3113875b67b5652e62e78a4397db6ad86c1a5d38735ab",
+    "width": 1672
+  },
+  "kind": "nightly",
+  "research": {
+    "sources": [
+      {
+        "label": "Research preprint",
+        "url": "https://doi.org/10.64898/2026.04.29.721711"
+      }
+    ],
+    "summary": "One cell-like crystal casts two luminous shadows, imagining complementary ways to describe cellular identity and gene activity."
+  },
+  "schema_version": 1,
+  "title": "A Cell Casts Two Shadows"
+}

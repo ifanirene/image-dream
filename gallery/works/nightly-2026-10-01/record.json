@@ -1,0 +1,23 @@
+{
+  "ai_generated": true,
+  "date": "2026-10-01",
+  "id": "nightly-2026-10-01",
+  "image": {
+    "file": "artwork.png",
+    "height": 941,
+    "sha256": "c3beaf5d16666f4b4025b63799188aa60a7dc3be4a44d0fb79aee144b9fb009d",
+    "width": 1672
+  },
+  "kind": "nightly",
+  "research": {
+    "sources": [
+      {
+        "label": "Research preprint",
+        "url": "https://doi.org/10.64898/2026.04.29.721711"
+      }
+    ],
+    "summary": "A mineral river changes continuously from blue to white to red, imagining cellular diversity across a vascular network."
+  },
+  "schema_version": 1,
+  "title": "The River Between Two Names"
+}

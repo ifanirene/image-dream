@@ -1,0 +1,23 @@
+{
+  "ai_generated": true,
+  "date": "2026-10-06",
+  "id": "nightly-2026-10-06",
+  "image": {
+    "file": "artwork.png",
+    "height": 941,
+    "sha256": "e0ecc67bcb36fd2d8c0a4ea115eb9aac8da7252541fb9a6dfc42bded8cea1858",
+    "width": 1672
+  },
+  "kind": "nightly",
+  "research": {
+    "sources": [
+      {
+        "label": "Published research",
+        "url": "https://doi.org/10.1089/hum.2022.211"
+      }
+    ],
+    "summary": "A retrofuturist station imagines the successive steps needed to turn an experimental perturbation into usable evidence."
+  },
+  "schema_version": 1,
+  "title": "The Four Gates of Evidence"
+}

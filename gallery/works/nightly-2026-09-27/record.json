@@ -1,0 +1,23 @@
+{
+  "ai_generated": true,
+  "date": "2026-09-27",
+  "id": "nightly-2026-09-27",
+  "image": {
+    "file": "artwork.png",
+    "height": 941,
+    "sha256": "430c3169926622c480a226afbe031a55b2b9ac591c54a5e530f749e4b897f480",
+    "width": 1672
+  },
+  "kind": "nightly",
+  "research": {
+    "sources": [
+      {
+        "label": "Published research",
+        "url": "https://doi.org/10.1038/s41586-020-2453-z"
+      }
+    ],
+    "summary": "A felted vascular landscape receives an uneven rain of glass beads, inspired by differences in plasma-protein uptake along brain vessels."
+  },
+  "schema_version": 1,
+  "title": "The Uneven Rain"
+}

@@ -1,0 +1,23 @@
+{
+  "ai_generated": true,
+  "date": "2026-10-10",
+  "id": "nightly-2026-10-10",
+  "image": {
+    "file": "artwork.png",
+    "height": 941,
+    "sha256": "d9c619c75fdc52a6a4079261312f170c67c84716a2db68239b095d31084eebbc",
+    "width": 1672
+  },
+  "kind": "nightly",
+  "research": {
+    "sources": [
+      {
+        "label": "Published research",
+        "url": "https://doi.org/10.1016/j.cell.2026.07.007"
+      }
+    ],
+    "summary": "A Cubist ensemble imagines the different cell populations implicated by genetic associations, without assigning one universal causal center."
+  },
+  "schema_version": 1,
+  "title": "The Atlas With No Single Center"
+}

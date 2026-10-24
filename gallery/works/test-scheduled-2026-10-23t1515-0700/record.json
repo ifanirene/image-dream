@@ -1,0 +1,23 @@
+{
+  "ai_generated": true,
+  "date": "2026-10-23",
+  "id": "test-scheduled-2026-10-23t1515-0700",
+  "image": {
+    "file": "artwork.png",
+    "height": 941,
+    "sha256": "cce88b82570a0738b8f48c91509c8fdf72d77357dc8ce8835e93dc64cfd02df6",
+    "width": 1672
+  },
+  "kind": "test",
+  "research": {
+    "sources": [
+      {
+        "label": "Published research",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/39528700/"
+      }
+    ],
+    "summary": "An ivory woodcut vault threaded with vermilion circulation imagines specialized vessels and bone formation in a mouse study."
+  },
+  "schema_version": 1,
+  "title": "Where Stone Can Grow"
+}

@@ -1,0 +1,23 @@
+{
+  "ai_generated": true,
+  "date": "2026-10-15",
+  "id": "nightly-2026-10-15",
+  "image": {
+    "file": "artwork.png",
+    "height": 941,
+    "sha256": "e083210759a1aa405310f57444bc00fa0e80abc2c6bef895d15912ff1b925980",
+    "width": 1672
+  },
+  "kind": "nightly",
+  "research": {
+    "sources": [
+      {
+        "label": "Published research",
+        "url": "https://doi.org/10.1186/s13059-020-02145-6"
+      }
+    ],
+    "summary": "A silver photographic collage imagines exposed cell-surface RNA and cell attachment; the image is conceptual, not a micrograph."
+  },
+  "schema_version": 1,
+  "title": "A Message on the Outer Skin"
+}

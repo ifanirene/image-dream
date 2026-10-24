@@ -1,0 +1,23 @@
+{
+  "ai_generated": true,
+  "date": "2026-09-25",
+  "id": "nightly-2026-09-25",
+  "image": {
+    "file": "artwork.png",
+    "height": 941,
+    "sha256": "e8cc97db32c5787d8d3d6e455683e8403f834b5c53b98cc06a2aea46e798d58c",
+    "width": 1672
+  },
+  "kind": "nightly",
+  "research": {
+    "sources": [
+      {
+        "label": "Public project record",
+        "url": "https://doi.org/10.3030/101040977"
+      }
+    ],
+    "summary": "Wood, copper and resin connect the scale of a heart to its smallest vessels, inspired by coronary microvascular research."
+  },
+  "schema_version": 1,
+  "title": "The Heart's Smallest Weather"
+}

@@ -1,0 +1,23 @@
+{
+  "ai_generated": true,
+  "date": "2026-10-08",
+  "id": "nightly-2026-10-08",
+  "image": {
+    "file": "artwork.png",
+    "height": 941,
+    "sha256": "f790f4dbf69b3e2ee089dbb79d182ef438cf42f732231413a3e27c4717bb9325",
+    "width": 1672
+  },
+  "kind": "nightly",
+  "research": {
+    "sources": [
+      {
+        "label": "Published research",
+        "url": "https://doi.org/10.7554/eLife.70246"
+      }
+    ],
+    "summary": "A sunlit fresco imagines developmental changes in coronary endothelial identity, from distinct origins toward shared tissue environments."
+  },
+  "schema_version": 1,
+  "title": "The House That Forgets Its Doors"
+}

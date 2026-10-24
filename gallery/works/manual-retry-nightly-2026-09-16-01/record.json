@@ -1,0 +1,23 @@
+{
+  "ai_generated": true,
+  "date": "2026-09-16",
+  "id": "manual-retry-nightly-2026-09-16-01",
+  "image": {
+    "file": "artwork.png",
+    "height": 941,
+    "sha256": "1b9a09fffc6fb01498bdc0f01bcab649d5ef986168944c7fc78018994e17b66a",
+    "width": 1672
+  },
+  "kind": "manual",
+  "research": {
+    "sources": [
+      {
+        "label": "Research preprint",
+        "url": "https://doi.org/10.64898/2026.04.29.721711"
+      }
+    ],
+    "summary": "Watercolor and fine ink imagine a vessel acquiring arterial features."
+  },
+  "schema_version": 1,
+  "title": "Becoming Arterial"
+}

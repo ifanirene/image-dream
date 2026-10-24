@@ -1,0 +1,23 @@
+{
+  "ai_generated": true,
+  "date": "2026-09-24",
+  "id": "nightly-2026-09-24",
+  "image": {
+    "file": "artwork.png",
+    "height": 941,
+    "sha256": "a5fa0de09b2b6edb043eac2c6849f7df4b9e73cb194356a8aa3c262862d97ced",
+    "width": 1672
+  },
+  "kind": "nightly",
+  "research": {
+    "sources": [
+      {
+        "label": "Public project record",
+        "url": "https://doi.org/10.3030/948088"
+      }
+    ],
+    "summary": "A fluorescent hand-printed landscape imagines vessels and neighboring astrocytes in an engineered tissue environment."
+  },
+  "schema_version": 1,
+  "title": "The Quiet Weave"
+}

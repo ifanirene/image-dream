@@ -1,0 +1,18 @@
+{
+  "ai_generated": true,
+  "date": "2026-10-04",
+  "id": "nightly-2026-10-04",
+  "image": {
+    "file": "artwork.png",
+    "height": 941,
+    "sha256": "c73b54bb90ae2ecffa76299150c3fd850c02dc5c7f8cafed55167ca18381a5b0",
+    "width": 1672
+  },
+  "kind": "nightly",
+  "research": {
+    "sources": [],
+    "summary": "A woodblock winter landscape imagines microscopic particles and moving ice fronts, inspired by research on freezing and materials."
+  },
+  "schema_version": 1,
+  "title": "The Architecture of Winter"
+}

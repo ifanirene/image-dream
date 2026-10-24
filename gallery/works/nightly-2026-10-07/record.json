@@ -1,0 +1,27 @@
+{
+  "ai_generated": true,
+  "date": "2026-10-07",
+  "id": "nightly-2026-10-07",
+  "image": {
+    "file": "artwork.png",
+    "height": 941,
+    "sha256": "64476529b6055a0d1c3c050241a3ec023399ed97c43ccebabc29b41a6294eaab",
+    "width": 1672
+  },
+  "kind": "nightly",
+  "research": {
+    "sources": [
+      {
+        "label": "Published research",
+        "url": "https://doi.org/10.1073/pnas.1002443107"
+      },
+      {
+        "label": "Published research",
+        "url": "https://doi.org/10.1126/science.1190371"
+      }
+    ],
+    "summary": "A blue-green mountain landscape draws on research linking EPAS1 variation and hemoglobin concentration in Tibetan highlanders."
+  },
+  "schema_version": 1,
+  "title": "The Quiet Red of Thin Air"
+}

@@ -1,0 +1,23 @@
+{
+  "ai_generated": true,
+  "date": "2026-10-16",
+  "id": "nightly-2026-10-16",
+  "image": {
+    "file": "artwork.png",
+    "height": 941,
+    "sha256": "27f3b09abde6ee17b7bee0b41d68940b207d86e454b590b416aa31bdad11e6ae",
+    "width": 1672
+  },
+  "kind": "nightly",
+  "research": {
+    "sources": [
+      {
+        "label": "Published research",
+        "url": "https://doi.org/10.1002/ana.24573"
+      }
+    ],
+    "summary": "A folk-art village imagines different kinds of partial repair, inspired by distinct responses in a mouse model of CADASIL."
+  },
+  "schema_version": 1,
+  "title": "The Village of Partial Repairs"
+}

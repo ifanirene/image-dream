@@ -1,0 +1,23 @@
+{
+  "ai_generated": true,
+  "date": "2026-10-24",
+  "id": "nightly-2026-10-24",
+  "image": {
+    "file": "artwork.png",
+    "height": 941,
+    "sha256": "6cf4f04d371efad266e48cfb418d57a0587c8c4fae9d6e1bd1c8e7e563ae7683",
+    "width": 1672
+  },
+  "kind": "nightly",
+  "research": {
+    "sources": [
+      {
+        "label": "Published research",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8546778/"
+      }
+    ],
+    "summary": "Green moths drift above a still mill in an ink-wash landscape, inspired by a study in which fluorescent glucose analogues did not track changes in glucose transport."
+  },
+  "schema_version": 1,
+  "title": "The Light That Kept Moving"
+}

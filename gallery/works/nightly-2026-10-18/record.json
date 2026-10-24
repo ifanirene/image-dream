@@ -1,0 +1,23 @@
+{
+  "ai_generated": true,
+  "date": "2026-10-18",
+  "id": "nightly-2026-10-18",
+  "image": {
+    "file": "artwork.png",
+    "height": 941,
+    "sha256": "85244cb8269454035fdbb3b6d2ee2e18ae92a70e9b7311a7c8453b556d2d7b67",
+    "width": 1672
+  },
+  "kind": "nightly",
+  "research": {
+    "sources": [
+      {
+        "label": "Published research",
+        "url": "https://doi.org/10.1016/j.cell.2025.02.005"
+      }
+    ],
+    "summary": "An optical field imagines unequal territories within one continuous form, inspired by fetal coronary anatomy."
+  },
+  "schema_version": 1,
+  "title": "An Early Asymmetry"
+}

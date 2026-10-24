@@ -1,0 +1,18 @@
+{
+  "ai_generated": true,
+  "date": "2026-09-15",
+  "id": "nightly-2026-09-15",
+  "image": {
+    "file": "artwork.png",
+    "height": 941,
+    "sha256": "03898e7b3141dcce3daf96b31edcc0415d7f23cac51ca63c8057a2bb7b8e02c7",
+    "width": 1672
+  },
+  "kind": "nightly",
+  "research": {
+    "sources": [],
+    "summary": "An embroidered sleeve imagines the supporting muscle coat around an arteriole."
+  },
+  "schema_version": 1,
+  "title": "A Soft Embrace"
+}

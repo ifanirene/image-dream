@@ -1,0 +1,23 @@
+{
+  "ai_generated": true,
+  "date": "2026-09-17",
+  "id": "nightly-2026-09-17",
+  "image": {
+    "file": "artwork.png",
+    "height": 941,
+    "sha256": "61369a6a2d15f29f38c82d10c84841fa33926bb347e7b8f1449ce4de13f2afdf",
+    "width": 1672
+  },
+  "kind": "nightly",
+  "research": {
+    "sources": [
+      {
+        "label": "Published research",
+        "url": "https://doi.org/10.1016/j.immuni.2025.04.003"
+      }
+    ],
+    "summary": "A translucent glass refuge imagines the local support that helps maintain macrophages beside brain vessels."
+  },
+  "schema_version": 1,
+  "title": "A Vessel-Side Refuge"
+}

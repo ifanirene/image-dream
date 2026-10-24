@@ -1,0 +1,23 @@
+{
+  "ai_generated": true,
+  "date": "2026-10-05",
+  "id": "nightly-2026-10-05",
+  "image": {
+    "file": "artwork.png",
+    "height": 941,
+    "sha256": "2d9999a054ff97ab151d1b0f58db65240c203861c4a53ca57e1418ba02b6553d",
+    "width": 1672
+  },
+  "kind": "nightly",
+  "research": {
+    "sources": [
+      {
+        "label": "Published research",
+        "url": "https://doi.org/10.1016/j.cell.2021.04.003"
+      }
+    ],
+    "summary": "A continuous geometric mural imagines regional differences among choroid-plexus cells, with a recurring thread through changing surroundings."
+  },
+  "schema_version": 1,
+  "title": "The Rooms Around the Thread"
+}
