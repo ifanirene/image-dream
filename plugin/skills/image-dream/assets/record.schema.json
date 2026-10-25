@@ -111,6 +111,10 @@
           "pattern": "^[0-9a-f]{64}$"
         }
       }
+    },
+    "display": {
+      "type": "boolean",
+      "description": "False keeps this artwork archived but excludes it from the built gallery."
     }
   }
 }

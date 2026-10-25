@@ -97,6 +97,8 @@ def export_artwork(repo: Path, image: Path, metadata: Path, reviewed: bool = Fal
             old = read_json(target / 'record.json')
             if old['image']['sha256'] != record['image']['sha256']:
                 raise ValueError('Existing artwork differs; use a new linked artwork ID')
+            if 'display' not in data and 'display' in old:
+                record['display'] = old['display']
             write_json(target / 'record.json', record)
         else:
             write_json(tmp / 'record.json', record)
@@ -145,6 +147,17 @@ def records(repo: Path) -> list[dict]:
     return sorted(out, key=lambda r: (r['date'] or '', r['id']), reverse=True)
 
 
+def visibility(repo: Path, ids: list[str], visible: bool) -> dict:
+    existing = {r['id']: r for r in records(repo)}
+    if any(work_id not in existing for work_id in ids):
+        raise ValueError('Unknown artwork ID; nothing changed')
+    for work_id in ids:
+        record = existing[work_id]
+        record['display'] = visible
+        write_json(repo / 'gallery' / 'works' / work_id / 'record.json', record)
+    return {'display': visible, 'ids': ids}
+
+
 def revision(repo: Path) -> str:
     try:
         return subprocess.check_output(['git', '-C', str(repo), 'rev-parse', 'HEAD'], text=True,
@@ -155,7 +168,7 @@ def revision(repo: Path) -> str:
 
 def build(repo: Path) -> dict:
     repo = repo.resolve()
-    works = records(repo)
+    works = [r for r in records(repo) if r.get('display', True)]
     output = repo / '_site'
     if output.is_symlink():
         raise ValueError('_site must not be a symlink')
@@ -253,6 +266,10 @@ def main() -> int:
         cmd.add_argument('--repo', type=Path, required=True)
         if name == 'publish':
             cmd.add_argument('--branch', default='main')
+    for name in ('hide', 'show'):
+        cmd = sub.add_parser(name)
+        cmd.add_argument('--repo', type=Path, required=True)
+        cmd.add_argument('--ids', nargs='+', required=True)
     cmd = sub.add_parser('export')
     cmd.add_argument('--repo', type=Path, required=True)
     cmd.add_argument('--image', type=Path, required=True)
@@ -267,7 +284,9 @@ def main() -> int:
     args = vars(parser.parse_args())
     command = args.pop('command')
     try:
-        if command == 'validate':
+        if command in ('hide', 'show'):
+            result = visibility(**args, visible=command == 'show')
+        elif command == 'validate':
             result = {'valid': True, 'count': len(records(**args))}
         elif command == 'export':
             result = export_artwork(**args)

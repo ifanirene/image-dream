@@ -2,7 +2,7 @@ import json
 from pathlib import Path
 import pytest
 from PIL import Image, PngImagePlugin
-from dream import export_artwork, records, build, due_key, validate_data
+from dream import export_artwork, records, build, due_key, validate_data, visibility
 
 @pytest.fixture
 def art(tmp_path):
@@ -60,3 +60,17 @@ def test_latest_due_uses_local_time_and_no_backlog():
     assert due_key('America/Los_Angeles','2026-10-24T02:00:00-07:00') == 'nightly-2026-10-24'
     assert due_key('America/Los_Angeles','2026-11-01T01:30:00-08:00') == 'nightly-2026-10-31'
     with pytest.raises(ValueError): due_key('America/Los_Angeles','2026-10-24T02:00:00')
+
+
+def test_hidden_art_stays_archived_and_is_not_built(art):
+    repo, source, meta, _ = art
+    export_artwork(repo, source, meta, True)
+    visibility(repo, ['test-art'], False)
+    assert build(repo)['count'] == 0
+    assert not (repo / '_site/works/test-art').exists()
+    assert len(records(repo)) == 1
+    # Re-import must not accidentally undo the user's curation.
+    export_artwork(repo, source, meta, True)
+    assert records(repo)[0]['display'] is False
+    visibility(repo, ['test-art'], True)
+    assert build(repo)['count'] == 1

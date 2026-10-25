@@ -47,3 +47,7 @@ Local automation requires the computer, Codex and source storage to be available
 Legacy artworks retain their original dimensions and dates where established. Missing information is stated rather than invented. Duplicate file copies are consolidated; distinct artworks remain separate. The private migration ledger preserves original paths, identities, hashes and unresolved recovery work.
 
 The workflow code and documentation are provided under [MIT](LICENSE). Generated art is identified as AI-generated conceptual art; this software license does not grant rights in third-party papers, reference images or other underlying material. Linked papers retain their own licenses.
+
+## Curate the display
+
+`./dream hide --repo . --ids ARTWORK_ID ...` removes selected works from the built site while keeping their records and originals in the archive. `./dream show` reverses this. Re-importing an artwork preserves this choice. Commit and push with `./dream publish --repo .`.

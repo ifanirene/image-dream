@@ -73,6 +73,10 @@
           }
         }
       }
+    },
+    "display": {
+      "type": "boolean",
+      "description": "False keeps this artwork archived but excludes it from the built gallery."
     }
   }
 }
