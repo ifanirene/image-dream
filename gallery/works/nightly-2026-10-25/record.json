@@ -1,0 +1,23 @@
+{
+  "ai_generated": true,
+  "date": "2026-10-25",
+  "id": "nightly-2026-10-25",
+  "image": {
+    "file": "artwork.png",
+    "height": 941,
+    "sha256": "721fa926f3a5b947dcde0685da0f0c771625ab1c5c1033090b5efcab901cef28",
+    "width": 1672
+  },
+  "kind": "nightly",
+  "research": {
+    "sources": [
+      {
+        "label": "Janssen et al., Journal of Cell Biology — published online July 27, 2026",
+        "url": "https://doi.org/10.1083/jcb.202509207"
+      }
+    ],
+    "summary": "A public square turns beneath its pedestrians, leaving open who is guiding whom. Inspired by a study of folded contacts between migrating endothelial cells: BIN1 and SNX9 help coordinate cell polarity, and loss of SNX9 disrupts junction remodeling and directed migration in developing zebrafish vessels. Conceptual art, not a depiction of anatomy."
+  },
+  "schema_version": 1,
+  "title": "A Corner in Motion"
+}
