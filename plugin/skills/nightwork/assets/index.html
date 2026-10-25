@@ -3,16 +3,15 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Nightwork — encounters with research through art, association, and conversation.">
+  <meta name="description" content="Nightwork — what if you ran into your research in an art gallery?">
   <title>Nightwork</title>
   <link rel="stylesheet" href="style.css">
-  {% if feedback_url %}<script src="feedback.js" defer></script>{% endif %}
 </head>
-<body{% if feedback_url %} data-feedback-url="{{ feedback_url }}"{% endif %}>
+<body>
 <header>
   <p class="eyebrow">RESEARCH · ART · POSSIBILITY</p>
   <h1>Nightwork</h1>
-  <p class="intro">Each morning, <a href="{{ github_url }}">Nightwork</a> pairs an artwork with an idea from a personal research library or recent literature. Linger over what catches your eye, sparks an association, or invites conversation.</p>
+  <p class="intro">Artworks and short notes sparked by working research libraries. Look around, share a piece with someone, and see what questions come up. Built with <a href="{{ github_url }}">Nightwork</a>.</p>
   <p class="note">AI-generated conceptual art.</p>
 </header>
 <main><div class="collection">
@@ -25,22 +24,6 @@
     <p>{{ work.research.summary }}</p>
     {% if work.research.sources %}<ul class="sources">{% for source in work.research.sources %}<li><a href="{{ source.url }}" target="_blank" rel="noopener noreferrer">{{ source.label }} ↗</a></li>{% endfor %}</ul>{% endif %}
     <a class="permalink" href="#{{ work.id }}" aria-label="Link to {{ work.title }}">Share this encounter ↗</a>
-    {% if feedback_url %}
-    <details class="feedback" data-artwork="{{ work.id }}">
-      <summary>How did it feel?</summary>
-      <form>
-        <fieldset class="rating" data-dimension="beauty"><legend>Visual appeal</legend><div class="rating-buttons">{% for value in range(1,6) %}<button type="button" data-score="{{ value }}" aria-pressed="false" aria-label="Visual appeal: {{ value }} of 5">{{ value }}</button>{% endfor %}</div><p class="scale">Not for me <span>Love it</span></p></fieldset>
-        <fieldset class="rating" data-dimension="inspiration"><legend>Sparked a thought</legend><div class="rating-buttons">{% for value in range(1,6) %}<button type="button" data-score="{{ value }}" aria-pressed="false" aria-label="Inspiration: {{ value }} of 5">{{ value }}</button>{% endfor %}</div><p class="scale">Not yet <span>Very much</span></p></fieldset>
-        <fieldset class="feelings"><legend>What stayed with you? <small>Choose any</small></legend><div class="feeling-buttons">
-          {% for value,label in [('surprised','Surprise'),('curious','Curiosity'),('resonates','Resonance'),('research-connection','A link to my research'),('share','An urge to share'),('confused','Confusion'),('unmoved','Little feeling')] %}<button type="button" data-feeling="{{ value }}" aria-pressed="false">{{ label }}</button>{% endfor %}
-        </div></fieldset>
-        <details class="comment"><summary>Add a thought</summary><label for="thought-{{ work.id }}">What did this make you notice, question, or want to share?</label><textarea id="thought-{{ work.id }}" name="comment" maxlength="2000" rows="3"></textarea></details>
-        <div class="submit-row"><button type="submit" class="send">Send response</button><button type="button" class="clear">Clear</button></div>
-        <p class="feedback-status" role="status" aria-live="polite"></p>
-        <p class="feedback-note">Anonymous. Responses are private to the gallery owner. Answer only what you want.</p>
-      </form>
-    </details>
-    {% endif %}
   </div>
 </article>
 {% endfor %}

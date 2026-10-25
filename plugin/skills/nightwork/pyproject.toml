@@ -1,6 +1,6 @@
 [project]
 name = "nightwork-tools"
-version = "0.2.0"
+version = "0.3.0"
 requires-python = ">=3.11,<3.14"
 dependencies = ["Pillow==12.2.0", "jsonschema==4.26.0", "Jinja2==3.1.6"]
 [dependency-groups]

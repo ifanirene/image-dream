@@ -166,32 +166,27 @@ def revision(repo: Path) -> str:
         return 'uncommitted'
 
 
-def site_settings(repo: Path, preview_feedback_url: str | None = None) -> dict:
-    settings = {'github_url': 'https://github.com/ifanirene/nightwork', 'feedback_url': None}
+def site_settings(repo: Path) -> dict:
+    settings = {'github_url': 'https://github.com/ifanirene/nightwork'}
     path = repo / 'site.json'
     if path.exists():
         data = read_json(path)
-        if set(data) - {'github_url', 'gallery_url', 'feedback_url'}:
+        if set(data) - {'github_url', 'gallery_url'}:
             raise ValueError('Unknown public site setting')
         settings.update(data)
-    for field in ('github_url', 'gallery_url', 'feedback_url'):
+    for field in ('github_url', 'gallery_url'):
         value = settings.get(field)
         if value is not None:
             url = urlsplit(value)
             if url.scheme != 'https' or not url.hostname or url.username or url.password or url.query or url.fragment:
                 raise ValueError(f'{field} must be a public HTTPS URL without credentials or query parameters')
-    if preview_feedback_url:
-        url = urlsplit(preview_feedback_url)
-        if url.scheme != 'http' or url.hostname not in {'localhost', '127.0.0.1'} or url.username or url.password or url.query or url.fragment:
-            raise ValueError('Preview feedback URL must use localhost HTTP')
-        settings['feedback_url'] = preview_feedback_url
     return settings
 
 
-def build(repo: Path, preview_feedback_url: str | None = None) -> dict:
+def build(repo: Path) -> dict:
     repo = repo.resolve()
     works = [r for r in records(repo) if r.get('display', True)]
-    settings = site_settings(repo, preview_feedback_url)
+    settings = site_settings(repo)
     output = repo / '_site'
     if output.is_symlink():
         raise ValueError('_site must not be a symlink')
@@ -218,8 +213,7 @@ def build(repo: Path, preview_feedback_url: str | None = None) -> dict:
                 'count': len(works), 'ids': [r['id'] for r in works]}
     write_json(output / 'site-manifest.json', manifest)
     (output / 'index.html').write_text(env.get_template('index.html').render(works=works, **settings), encoding='utf-8')
-    for asset in ('style.css', 'feedback.js'):
-        shutil.copy2(ASSETS / asset, output / asset)
+    shutil.copy2(ASSETS / 'style.css', output / 'style.css')
     return manifest
 
 
@@ -288,8 +282,6 @@ def main() -> int:
     for name in ('validate', 'build', 'publish'):
         cmd = sub.add_parser(name)
         cmd.add_argument('--repo', type=Path, required=True)
-        if name == 'build':
-            cmd.add_argument('--preview-feedback-url', help='Local preview only; never saved to site.json')
         if name == 'publish':
             cmd.add_argument('--branch', default='main')
     for name in ('hide', 'show'):

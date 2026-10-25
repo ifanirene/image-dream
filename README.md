@@ -1,23 +1,18 @@
 # Nightwork
 
-*Let your research surprise you.*
+**What if you ran into your research in an art gallery?**
 
-Nightwork is a Codex plugin that turns the quiet accumulation of a research library into a morning visual encounter. By choosing the papers, notes, or questions that matter to you, you choose which threads of inquiry to keep in play. On a schedule, an agent draws from your selected texts—or uses them as a compass to find recent research—and creates an artwork paired with a brief research note.
+Nightwork is a Codex plugin that creates imaginative visual art and a brief research note from the work you care about.
 
-A familiar concept, freed from the grammar of academic prose, can invite a different kind of attention. A new paper can become something to linger over, connect to your own work, or share with someone who sees it differently. An unexpected question from another viewer may send you back to your work with a fresh perspective.
+Point it at papers, reports, or notes you choose—or let it find related new primary papers and preprints. Using Codex’s native image generation, Nightwork responds with an original artwork. Like a striking journal cover or a dream about your project, each piece gives your ideas an unfamiliar shape.
 
-Nightwork explores that possibility: can unusual forms of encounter and conversation help us notice connections and ask questions we would otherwise miss?
+When you spend weeks inside a problem, your eyes get used to the same words. Seeing an idea recast as an image—sometimes strange, playful, or ambiguous—invites your mind to wander. You might notice a loose thread you had set aside, or show the piece to a friend or lab mate and hear them ask a question that never occurred to you because they see something completely different in the picture.
 
-[Explore the gallery](https://ifanirene.github.io/nightwork/) · [Set up Nightwork with your agent](docs/agent-setup.md)
+**Try it**
+You can use your personal literature libraries—such as Zotero or EndNote PDF folders—alongside local papers, research reports, or rough notes directly. Run Nightwork once in private whenever you want a fresh angle, or set an optional local schedule when your computer, Codex, and source files are available. Point your agent to the [Agent Setup Guide](docs/agent-setup.md) to get started, or browse the [Sample Gallery](https://ifanirene.github.io/nightwork/).
 
-## Try it
+**Your files and privacy**
+Your source files are strictly read-only, and generated outputs are stored privately on your machine by default. You choose which folders or notes are sent to Codex and the model, and whether you ever want to publish a piece to a public gallery. Full prompts and private notes stay outside any public gallery you create.
 
-Give your agent a small collection of research you care about and ask Nightwork for one artwork. You can revisit your own collection or discover recent papers related to it. If you enjoy the encounter, let it become a morning ritual. Mark what you find beautiful or what sparks a thought, and leave a note when you have something to share.
-
-Nightwork uses native Codex image generation. Scheduled runs need your computer, Codex, and sources available.
-
-## Your research, your choices
-
-Source access is read-only. Choose what your agent may read and send to its model, and whether to publish. Private notes and full prompts stay outside the public gallery; public output contains the artwork, a brief research note, and shareable source links. Keep credentials in your local environment, outside the repository.
-
-[MIT license](LICENSE).
+**License**
+Released under the [MIT License](LICENSE).

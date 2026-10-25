@@ -43,6 +43,6 @@ Abstract-first screening reduces setup and reading cost. An abstract can support
 
 Pair the artwork with a short note that makes the research accessible: the core finding, why it may relate to the user's interests, source link/date/status. Leave visual interpretation open. Let selecting initial texts, recognizing an association, responding to an image and sharing an interpretation all be forms of participation. Do not make comments or daily homework a condition of using Nightwork.
 
-Anonymous gallery feedback separates visual appeal from inspiration and allows multiple feelings plus optional text. These are viewer responses, not automatic instructions to repeat a style or proof of scientific discovery. Use them for later discussion only within the user's authorized scope. No feedback-driven schedule or automatic taste optimization is enabled by connecting sources.
+Optional in-chat choices record visual preference and whether an association came to mind. No public gallery or written comment is required. Save only actual answers privately; they do not automatically change creative rules or establish scientific insight. Follow the feedback instructions in SKILL.md.
 
 References: [Zotero Local API](https://www.zotero.org/support/dev/web_api/v3/local_api), [EndNote attachment paths](https://docs.endnote.com/docs/endnote/2025/v1/macos/en/content/03editref/selctngrltvpthabspthforfileatt.htm), [NIH preprints in PubMed](https://pmc.ncbi.nlm.nih.gov/about/nihpreprints/).

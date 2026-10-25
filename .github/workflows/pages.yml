@@ -20,11 +20,6 @@ jobs:
           python-version: '3.12'
       - name: Test
         run: uv run --frozen --project plugin/skills/nightwork python -m pytest tests -q
-      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
-        with:
-          node-version: '22'
-      - name: Feedback behavior
-        run: node --test feedback/test-worker.mjs
       - name: Validate and build
         run: ./dream build --repo .
       - uses: actions/configure-pages@983d7736d9b0ae728b81ab479565c72886d7745b # v5

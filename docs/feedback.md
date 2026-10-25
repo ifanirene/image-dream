@@ -1,45 +1,32 @@
-# Anonymous gallery responses
+# Private choices in chat
 
-The gallery supports separate 1–5 visual-appeal and inspiration ratings, multiple feelings, and optional comments. All are optional. Unanswered is `null`, never zero or a negative vote. Responses are saved only on Send; the interface confirms success only after a successful server response. A viewer may change a response or clear and remove it.
+After showing a completed artwork, offer two optional choices in the same chat:
 
-The included receiver is a small Cloudflare Worker with D1. GitHub Pages continues to host the gallery. No account is required for viewers. Hosting needs the gallery owner's Cloudflare account; this repo does not activate one or a paid plan.
+- **Visual preference:** Like / Neutral / Dislike.
+- **Did it bring an association to mind?** Yes / Not yet.
 
-## Deploy the receiver
+Use the host's native choice cards when available. In Codex, `request_user_input_async` can show both questions without blocking delivery. Put the artwork title and stable run key in each question so a delayed reply stays attached to the right work. A preselected choice is not an answer. If native cards are unavailable, offer a short numbered reply in chat; do not ask the user to configure a form or server. No comment, GitHub account, public repo or gallery is required.
 
-From `feedback/`, run `npm ci` using Node 22 or later. Sign in using `npx wrangler login` if needed. Create a D1 database with `npx wrangler d1 create nightwork-feedback`.
+Only save actual user answers. Map “Like / Neutral / Dislike” to `like / neutral / dislike`, and “Yes / Not yet” to `yes / not-yet`. Leave skipped questions unanswered. On a later reply, save it for the original artwork and acknowledge briefly; do not generate another artwork just because feedback arrived. If the intended artwork or answer is ambiguous, ask rather than infer it from general praise.
 
-Copy `wrangler.jsonc` to ignored `wrangler.deploy.jsonc`. Replace the example database ID with the returned ID. Set `ALLOWED_ORIGIN` to the gallery origin, without a path, and `GALLERY_URL` to the full gallery URL with its repository path. Choose a rate-limit namespace unused by other apps on this account. Keep `observability.enabled` false so the application does not log submissions.
+## Save an answer
 
-```sh
-npx wrangler d1 migrations apply nightwork-feedback --remote --config wrangler.deploy.jsonc
-npx wrangler secret put ADMIN_TOKEN --config wrangler.deploy.jsonc
-npx wrangler deploy --config wrangler.deploy.jsonc
-```
-
-Use a fresh random admin token of at least 32 characters. Store it privately; never put it in `site.json`, browser JavaScript or a shell argument committed to history. `/health` checks that the database is ready. Before enabling the public form, submit a synthetic response for a public work, verify it through the authenticated export, and remove it using the same browser token.
-
-Then set `feedback_url` in the repository's `site.json` to the HTTPS worker origin and deploy Pages. Do not include an admin token, query string or `/feedback` suffix in this URL. The receiver validates artwork IDs against the published site manifest, so new nightly works need no backend redeployment. Changes may take up to one minute to appear in its cache.
-
-## Export and interpret
-
-`GET /admin/export` requires `Authorization: Bearer <ADMIN_TOKEN>`. Read it through a private agent environment; do not paste the token into the gallery or a public URL. The JSON contains up to 500 rows and a `next_offset` for pagination. Save exports outside the public repository. Use `?offset=N` for the next page.
-
-One random browser token maps to one mutable response per artwork. The receiver stores a hash, not the token, and does not request names, accounts, email or location. It stores current answers plus creation/update times; it does not retain every earlier revision. Comments are private to the gallery owner. The browser remembers drafts and selections locally; clearing browser storage loses that editing identity. A different browser can submit again. These are anonymous browser responses, not verified individual people, and they do not automatically distinguish the owner from visitors.
-
-The service applies a per-token rate limit, validates size/fields and restricts browser origins. It does not prevent every form of automated voting. Hosting providers may retain their normal infrastructure logs. Keep raw responses private, separate the two rating distributions, retain unanswered counts, and treat feeling selections as categories rather than a quality score. Do not infer a research insight from a high inspiration rating alone or automatically rewrite creative rules from votes.
-
-## Local review
+The helper uses the same private root and stable occurrence key as `dream_runs.py`. It writes `feedback.json` beside the completed run. The agent runs these commands, not the user:
 
 ```sh
-npx wrangler d1 migrations apply nightwork-feedback --local
-npx wrangler dev --local --port 8787 --var ALLOWED_ORIGIN:http://127.0.0.1:8042 --var GALLERY_URL:http://127.0.0.1:8042/
+./nightwork feedback record --output /private/series --key NIGHTLY_KEY \
+  --appeal like --association not-yet --response-ref USER_REPLY_REFERENCE
+./nightwork feedback stats --output /private/series
 ```
 
-In another terminal, from the repository:
+For an installed skill, run `python <skill>/scripts/feedback.py` directly; it needs only the Python standard library. `--response-ref` is a private message reference or a dated description of the actual reply. Each dimension keeps its own reference. Either choice can be saved alone; a later update preserves the other one. To withdraw a choice, explicitly set that dimension to `unanswered`. Repeated replies replace the current choice for that work rather than adding votes.
 
-```sh
-./nightwork build --repo . --preview-feedback-url http://127.0.0.1:8787
-python3 -m http.server 8042 --bind 127.0.0.1 --directory _site
-```
+The helper rejects missing or unfinished runs. Statistics cover completed local runs under this private root; imported images without native run records are not included. Do not create fictional completed runs to expand that denominator. Completed runs are not proof that the user viewed each image.
 
-This uses local D1 data. Production builds use `site.json` and never inherit the preview override. Keep `.dev.vars`, local database state and deployment config ignored. Tests use an in-memory SQLite adapter to check SQL behavior; local Worker/browser checks exercise the actual receiver separately.
+## Read the statistics
+
+Each question reports its own answer counts, unanswered count, and percentages among answers. No answers gives a null percentage, not zero approval. These are one person's choices across artworks, not a population survey. Keep the file and statistics private unless the user asks to share them.
+
+A positive association answer means an association came to mind, not that a scientific idea was validated. A visual preference does not identify the liked feature. The helper collects choices and summarizes them; it does not train a model or automatically rewrite the user's creative rules. Discuss any later use of these responses to steer creation separately.
+
+The old hosted form has been removed. Feedback does not depend on Cloudflare, public Issues, browser storage, or gallery publication. Private files remain on the user's computer; chat replies use the current chat service.

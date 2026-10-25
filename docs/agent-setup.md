@@ -31,7 +31,7 @@ These commands output private metadata, not paper summaries. Inspect the relevan
 
 ## Save a private series configuration
 
-Keep the public repo and private output as separate directories. A compact `config.md` outside Git should identify:
+Start with a private output directory. A public repository is optional; if the user chooses one, keep it separate from private output. A compact `config.md` outside Git should identify:
 
 - Selected source locations and read permissions; any papers/questions the user especially cares about.
 - Source mode: revisit the library, discover recent related work, or allow both without forced alternation.
@@ -41,11 +41,11 @@ Keep the public repo and private output as separate directories. A compact `conf
 
 Preserve the existing user's creative contract when upgrading. A fresh installation does not inherit the maintainer's private sources, aesthetics or publishing permission.
 
-## Run and publish
+## Run privately, publish optionally
 
 Follow the skill's occurrence reservation, one native generation call, private prompt/brief persistence, actual visual review and separate publication state. Publication resumes from saved pixels; it never needs a second generation.
 
-For public output, create the strict [metadata JSON](../plugin/skills/nightwork/assets/metadata.schema.json) privately. Include the title, concise research note, and public source links. Keep private hypotheses and full prompts out of captions and image content.
+Only when publishing is authorized, create the strict [metadata JSON](../plugin/skills/nightwork/assets/metadata.schema.json) privately. Include the title, concise research note, and public source links. Keep private hypotheses and full prompts out of captions and image content.
 
 ```sh
 ./nightwork export --repo . --image /private/run/image.png --metadata /private/run/public.json --reviewed
@@ -57,9 +57,9 @@ For public output, create the strict [metadata JSON](../plugin/skills/nightwork/
 
 Enable GitHub Pages with GitHub Actions. Change `site.json` to the owner's repository and gallery URLs. CI validates/builds/deploys `_site`; it holds no image-generation credentials. The publish command stages gallery records/images only. Review workflow/config changes separately. Local schedules require the computer, app and source storage to be available; keep one scheduler per series and preserve existing occurrence keys.
 
-## Optional anonymous responses
+## Optional choices in chat
 
-See [feedback hosting](feedback.md). The gallery stays static; the separate receiver stores two optional ratings, selected feelings and optional comments. Set `site.json`'s `feedback_url` only after the receiver is deployed and a real submission/export check succeeds. With a null URL the gallery omits the form; it never pretends local browser state was collected remotely.
+After delivering an artwork, offer two optional native choice cards: visual preference (Like / Neutral / Dislike) and whether an association came to mind (Yes / Not yet). Save only the user's actual answers beside the private completed run. The agent handles persistence and can summarize personal statistics; no public repo, comments or hosting setup is needed. See [private feedback](feedback.md) for recording, revisions and interpretation.
 
 ## Curation and maintenance
 
@@ -67,7 +67,6 @@ See [feedback hosting](feedback.md). The gallery stays static; the separate rece
 
 ```sh
 uv run --frozen --project plugin/skills/nightwork python -m pytest tests -q
-node --test feedback/test-worker.mjs
 ./nightwork build --repo .
 ```
 

@@ -76,19 +76,18 @@ def test_hidden_art_stays_archived_and_is_not_built(art):
     assert build(repo)['count'] == 1
 
 
-def test_feedback_requires_configured_receiver_and_preview_is_local_only(art):
+def test_public_gallery_has_no_private_feedback_channel(art):
     repo, source, meta, _ = art
     export_artwork(repo, source, meta, True)
+    # Private response state is never copied into the public build.
+    (repo / 'private-response.json').write_text('{"appeal":"like"}')
     build(repo)
-    assert 'How did it feel?' not in (repo / '_site/index.html').read_text()
-    build(repo, preview_feedback_url='http://127.0.0.1:8787')
     page = (repo / '_site/index.html').read_text()
-    assert 'How did it feel?' in page and 'A link to my research' in page
-    assert not (repo / 'site.json').exists()
+    assert '<form' not in page and '<script' not in page
+    assert not (repo / '_site/private-response.json').exists()
+    (repo / 'site.json').write_text(json.dumps({'feedback_url': 'https://old.example'}))
     with pytest.raises(ValueError):
-        build(repo, preview_feedback_url='https://unexpected.example')
-    (repo / 'site.json').write_text(json.dumps({'feedback_url':'https://example.org?token=secret'}))
-    with pytest.raises(ValueError): build(repo)
+        build(repo)
 
 
 def test_legacy_build_marker_is_accepted_during_rename(art):
