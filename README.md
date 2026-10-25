@@ -15,7 +15,7 @@ codex plugin marketplace add ifanirene/image-dream --ref main
 codex plugin add image-dream@image-dream
 ```
 
-Create a private sibling directory for your source settings and runs. Point the skill at your private configuration. Keep source selection and artistic preferences there. The example below describes only public export, after generation and visual review:
+Create a private sibling directory for your source settings and runs. Point the skill at your private configuration. Keep source selection and artistic preferences there. Sources may include a private wiki, a reference library, and recent primary research discovered from the user's interests. Favor evocative imagery and independent composition; examples are not fixed themes or a style rotation. The example below describes only public export, after generation and visual review:
 
 ```sh
 ./dream export --repo . --image /path/to/private/run/image.png \

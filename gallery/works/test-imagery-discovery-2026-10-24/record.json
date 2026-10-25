@@ -1,0 +1,23 @@
+{
+  "ai_generated": true,
+  "date": "2026-10-24",
+  "id": "test-imagery-discovery-2026-10-24",
+  "image": {
+    "file": "artwork.png",
+    "height": 941,
+    "sha256": "3234a93b008dbdd2aeb6f7698ec6af58a080857295d713c7f8f5702bbc340385",
+    "width": 1672
+  },
+  "kind": "test",
+  "research": {
+    "sources": [
+      {
+        "label": "Gomez-Cruz et al. · Advanced Materials · 8 Aug 2026",
+        "url": "https://doi.org/10.1002/adma.74523"
+      }
+    ],
+    "summary": "A settled curtain casts a shadow that still billows, imagining how a past force can briefly outlast its cause. Inspired by a 2026 study of short-term cytoskeletal memory in cultured glioblastoma cells; conceptual art, not a depiction of anatomy or human memory."
+  },
+  "schema_version": 1,
+  "title": "After the Wind"
+}

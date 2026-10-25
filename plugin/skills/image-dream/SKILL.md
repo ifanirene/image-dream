@@ -9,7 +9,11 @@ Use the user's private series configuration. It specifies source access, creativ
 
 ## Preserve the creative contract
 
-The series configuration controls source choice and artistic direction. Changing runtime or publishing must not change that contract. Read the entire creative history, including migrated works, before selecting a concept. Consider several distinct source-grounded ideas; choose a coherent artwork, which may connect several findings. Avoid overused ideas, metaphors, compositions and palettes. No forced topic alternation or mechanical style rotation. Inspect 1–3 actual reference images, and record their roles. Use real files as native generation references when appropriate; only claim conditioning when they were passed. Landscape 16:9, no visible text unless the user requests otherwise. Show scientific relationships accurately, but transform the material into art rather than a labelled scientific figure.
+The series configuration controls source choice and artistic direction. Changing runtime or publishing must not change that contract. Read the entire creative history, including migrated works, before selecting a concept. Consider several distinct source-grounded ideas; choose a coherent artwork, which may connect several findings. Avoid overused ideas, metaphors, compositions and palettes. No forced topic alternation or mechanical style rotation. Inspect 1–3 actual reference images, and record their roles. Use real files as native generation references when appropriate; only claim conditioning when they were passed. Landscape 16:9, no visible text unless the user requests otherwise. Prioritize evocative imagery, interpretive space and an independent composition. Ground the accompanying research explanation accurately; the artwork is not a scientific illustration or evidence of anatomical accuracy. Avoid merely changing the material of the same biological network. Biological forms are welcome when they carry a meaningful visual relationship or tension. Brainstormed examples and named styles are possibilities, never required themes or a rotation. Scientific figures inform evidence review and are not automatic image-generation templates.
+
+## Discover source material
+
+Follow the series configuration's allowed sources. When discovery is authorized, use the user's wiki or reference library as context rather than a closed topic list; explore recent primary research and meaningful adjacent connections. Do not require every artwork to originate in the private corpus. Search PubMed/biomcp first for biomedical literature, then publisher pages and built-in web search. Verify publication date, article type and the findings actually used; record source scope, limitations and why the work may interest the user. Do not imply a paper is new to the user unless checked. Keep private context out of public queries and captions. There is no fixed quota or rotation between source types.
 
 ## Runtime and directories
 
@@ -51,7 +55,7 @@ Record exported/pushed/deployed status and observed revision in the private run'
 
 Use the host's supported automation tool. Local scheduling requires the host, app and source volume to be available. Keep exactly one active scheduler for a series; migration must disable its predecessor only after the replacement workflow has passed a live test. Do not assume an interactive test proves a scheduled wakeup.
 
-Show each completed image with title, one concise source/artistic interpretation sentence and gallery link. Notify on a new or changed actionable failure. Stay quiet for duplicate/no-due runs and unchanged blockers. Keep complete private records even when a user-facing report is brief.
+Show each completed image with title, a concise artistic interpretation, the linked paper and date, a brief evidence-grounded finding and why it may interest the user, plus the gallery link. Distinguish the artistic metaphor from the measured result. Notify on a new or changed actionable failure. Stay quiet for duplicate/no-due runs and unchanged blockers. Keep complete private records even when a user-facing report is brief.
 
 ## Validation and maintenance
 
