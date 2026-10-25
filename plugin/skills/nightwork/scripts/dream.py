@@ -167,11 +167,15 @@ def revision(repo: Path) -> str:
 
 
 def site_settings(repo: Path) -> dict:
-    settings = {'github_url': 'https://github.com/ifanirene/nightwork'}
+    settings = {
+        'github_url': 'https://github.com/ifanirene/nightwork',
+        'gallery_title': 'Nightwork',
+        'gallery_intro': 'Artworks and short notes sparked by working research libraries.',
+    }
     path = repo / 'site.json'
     if path.exists():
         data = read_json(path)
-        if set(data) - {'github_url', 'gallery_url'}:
+        if set(data) - {'github_url', 'gallery_url', 'gallery_title', 'gallery_intro'}:
             raise ValueError('Unknown public site setting')
         settings.update(data)
     for field in ('github_url', 'gallery_url'):
@@ -180,6 +184,9 @@ def site_settings(repo: Path) -> dict:
             url = urlsplit(value)
             if url.scheme != 'https' or not url.hostname or url.username or url.password or url.query or url.fragment:
                 raise ValueError(f'{field} must be a public HTTPS URL without credentials or query parameters')
+    for field in ('gallery_title', 'gallery_intro'):
+        if not isinstance(settings[field], str) or not settings[field].strip():
+            raise ValueError(f'{field} must be nonempty text')
     return settings
 
 

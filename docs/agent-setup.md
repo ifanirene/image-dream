@@ -55,7 +55,7 @@ Only when publishing is authorized, create the strict [metadata JSON](../plugin/
 ./nightwork verify --url https://OWNER.github.io/REPO/ --revision COMMIT_SHA
 ```
 
-Enable GitHub Pages with GitHub Actions. Change `site.json` to the owner's repository and gallery URLs. CI validates/builds/deploys `_site`; it holds no image-generation credentials. The publish command stages gallery records/images only. Review workflow/config changes separately. Local schedules require the computer, app and source storage to be available; keep one scheduler per series and preserve existing occurrence keys.
+Enable GitHub Pages with GitHub Actions. Change `site.json` to the owner's repository and gallery URLs. Optional `gallery_title` and `gallery_intro` fields set the gallery's own name and introduction; Nightwork remains the plugin name. These fields are plain text. CI validates/builds/deploys `_site`; it holds no image-generation credentials. The publish command stages gallery records/images only. Review workflow/config changes separately. Local schedules require the computer, app and source storage to be available; keep one scheduler per series and preserve existing occurrence keys.
 
 ## Optional choices in chat
 

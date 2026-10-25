@@ -97,3 +97,21 @@ def test_legacy_build_marker_is_accepted_during_rename(art):
     (repo / '_site/.image-dream-build').write_text('old build')
     assert build(repo)['count'] == 1
     assert (repo / '_site/.nightwork-build').exists()
+
+
+def test_gallery_identity_is_independent_and_escaped(art):
+    repo, source, meta, _ = art
+    export_artwork(repo, source, meta, True)
+    (repo / 'site.json').write_text(json.dumps({
+        'gallery_title': 'Another Look',
+        'gallery_intro': 'A <fresh> look & another perspective.',
+    }))
+    build(repo)
+    page = (repo / '_site/index.html').read_text()
+    assert '<title>Another Look</title>' in page
+    assert '<h1>Another Look</h1>' in page
+    assert 'A &lt;fresh&gt; look &amp; another perspective.' in page
+    assert 'Built with <a href="https://github.com/ifanirene/nightwork">Nightwork' in page
+    (repo / 'site.json').write_text(json.dumps({'gallery_intro': None}))
+    with pytest.raises(ValueError, match='gallery_intro must be nonempty text'):
+        build(repo)
