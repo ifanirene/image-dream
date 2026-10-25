@@ -1,0 +1,23 @@
+{
+  "ai_generated": true,
+  "date": "2026-10-24",
+  "id": "test-local-headless-2026-10-24",
+  "image": {
+    "file": "artwork.png",
+    "height": 941,
+    "sha256": "0ac8c6e6a4a8936c9c9fae7426a9b6cc3e4068e00857c9f753a399493ae38216",
+    "width": 1672
+  },
+  "kind": "test",
+  "research": {
+    "sources": [
+      {
+        "label": "Dinh et al. (2022), mucosal endothelial addressin regulation",
+        "url": "https://www.nature.com/articles/s41467-022-34991-2"
+      }
+    ],
+    "summary": "A biomorphic paper collage imagines how tissue context and vessel-segment identity jointly shape where immune-homing molecules appear on endothelial surfaces. Inspired by experiments on intestinal vascular specialization; conceptual art, not a map of immune-cell traffic."
+  },
+  "schema_version": 1,
+  "title": "The Geography of Welcome"
+}
