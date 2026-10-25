@@ -12,7 +12,7 @@
   <p class="eyebrow">RESEARCH · ART · POSSIBILITY</p>
   <h1>{{ gallery_title }}</h1>
   <p class="intro">{{ gallery_intro }}</p>
-  <p class="note">AI-generated conceptual art.</p>
+  <p class="note">Built with <a href="{{ github_url }}">Nightwork</a>. AI-generated conceptual art.</p>
 </header>
 <main><div class="collection">
 {% for work in works %}
@@ -28,5 +28,5 @@
 </article>
 {% endfor %}
 </div></main>
-<footer><p>{{ works|length }} encounters · Built with <a href="{{ github_url }}">Nightwork ↗</a></p></footer>
+<footer><p>{{ works|length }} encounters</p></footer>
 </body></html>
