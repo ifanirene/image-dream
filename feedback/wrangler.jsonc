@@ -1,0 +1,19 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "nightwork-feedback",
+  "main": "worker.mjs",
+  "compatibility_date": "2026-10-24",
+  "workers_dev": true,
+  "observability": {"enabled": false},
+  "vars": {
+    "ALLOWED_ORIGIN": "https://ifanirene.github.io",
+    "GALLERY_URL": "https://ifanirene.github.io/nightwork/"
+  },
+  "d1_databases": [{
+    "binding": "DB",
+    "database_name": "nightwork-feedback",
+    "database_id": "00000000-0000-0000-0000-000000000000",
+    "migrations_dir": "migrations"
+  }],
+  "ratelimits": [{"name": "FEEDBACK_LIMITER", "namespace_id": "271828", "simple": {"limit": 30, "period": 60}}]
+}

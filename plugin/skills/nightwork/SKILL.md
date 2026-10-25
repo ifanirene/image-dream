@@ -1,17 +1,25 @@
 ---
-name: image-dream
-description: Create one imaginative artwork grounded in research, using native Codex subscription image generation; keep detailed provenance private and publish reviewed images, titles and research inspiration to a GitHub Pages gallery. Use for Image Dream runs, migration, validation, and publication.
+name: nightwork
+description: Encounter personally chosen research through visual art, recent-paper discovery, and reflection. Use for Nightwork setup, one-off or scheduled artworks, source selection, and gallery publication with native Codex image generation.
 ---
 
-# Image Dream
+# Nightwork
 
 Use the user's private series configuration. It specifies source access, creative direction, output directories and publication permission. Read it afresh every run. Never infer permission to publish a new user's private source material from this skill.
+
+## Begin with the user's research
+
+For a new series, read [sources and participation](references/sources.md). Let the user point to an existing folder, library collection, or a few selected texts and questions. Discover available connections before asking for setup. Do not require an export or create another authoritative library. A small selection can express the user's interests; do not infer that every item in a large library is equally important. Save source scope and publication choices in the private series configuration. Installation alone does not authorize a schedule or public publishing.
+
+The artwork and short research note invite the user to form associations and discuss them with others. Anchor the note in the source finding without explaining every visual relationship. A surprising or beautiful image is not by itself evidence of a new scientific insight. Do not force a daily discussion question or automatically turn votes into creative restrictions.
 
 ## Preserve the creative contract
 
 The series configuration controls source choice and artistic direction. Changing runtime or publishing must not change that contract. Read the entire creative history, including migrated works, before selecting a concept. Consider several distinct source-grounded ideas; choose a coherent artwork, which may connect several findings. Avoid overused ideas, metaphors, compositions and palettes. No forced topic alternation or mechanical style rotation. Inspect 1–3 actual reference images, and record their roles. Use real files as native generation references when appropriate; only claim conditioning when they were passed. Landscape 16:9, no visible text unless the user requests otherwise. Prioritize evocative imagery, interpretive space and an independent composition. Ground the accompanying research explanation accurately; the artwork is not a scientific illustration or evidence of anatomical accuracy. Avoid merely changing the material of the same biological network. Biological forms are welcome when they carry a meaningful visual relationship or tension. Brainstormed examples and named styles are possibilities, never required themes or a rotation. Scientific figures inform evidence review and are not automatic image-generation templates.
 
 ## Discover source material
+
+Two modes share the same creative workflow: revisit the selected library, or use it as context to discover recent relevant research. The private configuration can select one or allow either; never impose alternation. Use the abstract to screen and, where sufficient, ground a broad concept. Read relevant primary results, figures or methods when the explanation depends on specific mechanisms, limitations or a cross-study connection. Record exactly what was read; do not claim full-text review from metadata. Search PubMed/biomcp and appropriate preprint sources separately, because PubMed includes only some preprints. Deduplicate preprint/published versions and show the date and publication status in the short source note. Consult [source access](references/sources.md) when attaching a folder, Zotero or EndNote.
 
 Follow the series configuration's allowed sources. When discovery is authorized, use the user's wiki or reference library as context rather than a closed topic list; explore recent primary research and meaningful adjacent connections. Do not require every artwork to originate in the private corpus. Search PubMed/biomcp first for biomedical literature, then publisher pages and built-in web search. Verify publication date, article type and the findings actually used; record source scope, limitations and why the work may interest the user. Do not imply a paper is new to the user unless checked. Keep private context out of public queries and captions. There is no fixed quota or rotation between source types.
 
@@ -55,8 +63,8 @@ Record exported/pushed/deployed status and observed revision in the private run'
 
 Use the host's supported automation tool. Local scheduling requires the host, app and source volume to be available. Keep exactly one active scheduler for a series; migration must disable its predecessor only after the replacement workflow has passed a live test. Do not assume an interactive test proves a scheduled wakeup.
 
-Show each completed image with title, a concise artistic interpretation, the linked paper and date, a brief evidence-grounded finding and why it may interest the user, plus the gallery link. Distinguish the artistic metaphor from the measured result. Notify on a new or changed actionable failure. Stay quiet for duplicate/no-due runs and unchanged blockers. Keep complete private records even when a user-facing report is brief.
+Show each completed image with its title, the linked paper and date/status, a brief account of the core finding and why it may interest the user, plus the gallery link. Leave interpretive room; an artistic reading is an invitation, not the single correct explanation. Distinguish the artistic metaphor from the measured result. Notify on a new or changed actionable failure. Stay quiet for duplicate/no-due runs and unchanged blockers. Keep complete private records even when a user-facing report is brief.
 
 ## Validation and maintenance
 
-Run `uv run --frozen --project plugin/skills/image-dream pytest tests -q` and `./dream build --repo .` from the repository. Review the rendered desktop/mobile gallery after layout changes. Dependencies are pinned in `uv.lock`; update them deliberately. Code is MIT; see the repository README for artwork and research-source scope.
+Run `uv run --frozen --project plugin/skills/nightwork python -m pytest tests -q` and `./dream build --repo .` from the repository. Review the rendered desktop/mobile gallery after layout changes. Dependencies are pinned in `uv.lock`; update them deliberately. Code is MIT; see the repository README for artwork and research-source scope.

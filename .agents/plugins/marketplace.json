@@ -1,1 +1,1 @@
-{"name":"image-dream","interface":{"displayName":"Image Dream"},"plugins":[{"name":"image-dream","source":{"source":"local","path":"./plugin"},"policy":{"installation":"AVAILABLE","authentication":"ON_INSTALL"},"category":"Productivity"}]}
+{"name":"nightwork","interface":{"displayName":"Nightwork"},"plugins":[{"name":"nightwork","source":{"source":"local","path":"./plugin"},"policy":{"installation":"AVAILABLE","authentication":"ON_INSTALL"},"category":"Productivity"}]}

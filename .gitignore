@@ -9,3 +9,9 @@ private/
 private-*/
 runs/
 *.log
+node_modules/
+.wrangler/
+.dev.vars
+.dev.vars.*
+feedback/wrangler.local.jsonc
+feedback/wrangler.deploy.jsonc

@@ -1,0 +1,8 @@
+#!/bin/sh
+set -eu
+root=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
+if [ "${1-}" = "sources" ]; then
+    shift
+    exec uv run --frozen --project "$root/plugin/skills/nightwork" python "$root/plugin/skills/nightwork/scripts/sources.py" "$@"
+fi
+exec uv run --frozen --project "$root/plugin/skills/nightwork" python "$root/plugin/skills/nightwork/scripts/dream.py" "$@"

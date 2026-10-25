@@ -1,7 +1,11 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
-  "name": "image-dream",
-  "version": "0.1.1",
-  "description": "Create source-grounded conceptual art with native Codex image generation and publish a verified static gallery.",
-  "extensions": {"com.openai": {"requires_local_executor": true}}
+  "name": "nightwork",
+  "version": "0.2.0",
+  "description": "Encounter your research through visual art, recent discoveries, and shared reflection.",
+  "extensions": {
+    "com.openai": {
+      "requires_local_executor": true
+    }
+  }
 }

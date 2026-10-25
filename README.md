@@ -1,53 +1,23 @@
-# Image Dream
+# Nightwork
 
-[Open the gallery](https://ifanirene.github.io/image-dream/)
+*Let your research surprise you.*
 
-Source-grounded conceptual art, generated locally with native Codex image generation and published through a small, reproducible static pipeline. The gallery contains images, titles, research inspiration and public paper links. Detailed research notes, prompts, references and run logs remain outside this repository.
+Nightwork is a Codex plugin that turns the quiet accumulation of a research library into a morning visual encounter. By choosing the papers, notes, or questions that matter to you, you choose which threads of inquiry to keep in play. On a schedule, an agent draws from your selected texts—or uses them as a compass to find recent research—and creates an artwork paired with a brief research note.
 
-## Use
+A familiar concept, freed from the grammar of academic prose, can invite a different kind of attention. A new paper can become something to linger over, connect to your own work, or share with someone who sees it differently. An unexpected question from another viewer may send you back to your work with a fresh perspective.
 
-Requires Codex with native image generation available to its currently authenticated subscription, Python 3.11–3.13, [uv](https://docs.astral.sh/uv/), Git, and GitHub authentication for publishing. No image-generation API key or account ID is stored here. App and CLI login state must be checked separately if you switch accounts; this workflow does not override either.
+Nightwork explores that possibility: can unusual forms of encounter and conversation help us notice connections and ask questions we would otherwise miss?
 
-The portable skill is [plugin/skills/image-dream/SKILL.md](plugin/skills/image-dream/SKILL.md). Read it directly in Codex, or install the lightweight plugin using the included marketplace:
+[Explore the gallery](https://ifanirene.github.io/nightwork/) · [Set up Nightwork with your agent](docs/agent-setup.md)
 
-```sh
-codex plugin marketplace add ifanirene/image-dream --ref main
-codex plugin add image-dream@image-dream
-```
+## Try it
 
-Create a private sibling directory for your source settings and runs. Point the skill at your private configuration. Keep source selection and artistic preferences there. Sources may include a private wiki, a reference library, and recent primary research discovered from the user's interests. Favor evocative imagery and independent composition; examples are not fixed themes or a style rotation. The example below describes only public export, after generation and visual review:
+Give your agent a small collection of research you care about and ask Nightwork for one artwork. You can revisit your own collection or discover recent papers related to it. If you enjoy the encounter, let it become a morning ritual. Mark what you find beautiful or what sparks a thought, and leave a note when you have something to share.
 
-```sh
-./dream export --repo . --image /path/to/private/run/image.png \
-  --metadata /path/to/private/run/public.json --reviewed
-./dream validate --repo .
-./dream build --repo .
-./dream publish --repo .
-./dream verify --url https://OWNER.github.io/REPO/ --revision COMMIT_SHA
-```
+Nightwork uses native Codex image generation. Scheduled runs need your computer, Codex, and sources available.
 
-See [the public metadata schema](plugin/skills/image-dream/assets/metadata.schema.json). Each `gallery/works/<id>/` contains exactly `artwork.png` and `record.json`. Export removes embedded image metadata and records the exact file hash and dimensions. Original image bytes are retained privately. Previews are generated without cropping. Captions and images share the same record ID; the webpage is built from these records, never edited by hand.
+## Your research, your choices
 
-## Publish and test
+Source access is read-only. Choose what your agent may read and send to its model, and whether to publish. Private notes and full prompts stay outside the public gallery; public output contains the artwork, a brief research note, and shareable source links. Keep credentials in your local environment, outside the repository.
 
-Enable GitHub Pages with **GitHub Actions** as the source. Pushes to `main` run tests, validate the entire gallery, build the site and deploy `_site`. The workflow uses pinned action commits and locked Python dependencies. It needs no Codex credentials and performs no image generation.
-
-```sh
-uv run --frozen --project plugin/skills/image-dream pytest tests -q
-./dream build --repo .
-python3 -m http.server 8042 --directory _site
-```
-
-The build is deterministic for the same records, code revision and locked environment. An image-generation prompt is a reproducible procedure, not a promise of identical generated pixels. Structural tests do not replace visual inspection or scientific/privacy review.
-
-Local automation requires the computer, Codex and source storage to be available. An occurrence is reserved before generation. A duplicate or interrupted reservation never triggers a blind second image call. Failed push/deployment can resume from the saved image.
-
-## Archive and licensing
-
-Legacy artworks retain their original dimensions and dates where established. Missing information is stated rather than invented. Duplicate file copies are consolidated; distinct artworks remain separate. The private migration ledger preserves original paths, identities, hashes and unresolved recovery work.
-
-The workflow code and documentation are provided under [MIT](LICENSE). Generated art is identified as AI-generated conceptual art; this software license does not grant rights in third-party papers, reference images or other underlying material. Linked papers retain their own licenses.
-
-## Curate the display
-
-`./dream hide --repo . --ids ARTWORK_ID ...` removes selected works from the built site while keeping their records and originals in the archive. `./dream show` reverses this. Re-importing an artwork preserves this choice. Commit and push with `./dream publish --repo .`.
+[MIT license](LICENSE).

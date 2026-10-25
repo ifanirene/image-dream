@@ -1,4 +1,4 @@
 #!/bin/sh
+# Compatibility entrypoint for existing series and saved commands.
 set -eu
-root=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
-exec uv run --frozen --project "$root/plugin/skills/image-dream" python "$root/plugin/skills/image-dream/scripts/dream.py" "$@"
+exec "$(dirname -- "$0")/nightwork" "$@"

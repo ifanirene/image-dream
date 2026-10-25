@@ -74,3 +74,27 @@ def test_hidden_art_stays_archived_and_is_not_built(art):
     assert records(repo)[0]['display'] is False
     visibility(repo, ['test-art'], True)
     assert build(repo)['count'] == 1
+
+
+def test_feedback_requires_configured_receiver_and_preview_is_local_only(art):
+    repo, source, meta, _ = art
+    export_artwork(repo, source, meta, True)
+    build(repo)
+    assert 'How did it feel?' not in (repo / '_site/index.html').read_text()
+    build(repo, preview_feedback_url='http://127.0.0.1:8787')
+    page = (repo / '_site/index.html').read_text()
+    assert 'How did it feel?' in page and 'A link to my research' in page
+    assert not (repo / 'site.json').exists()
+    with pytest.raises(ValueError):
+        build(repo, preview_feedback_url='https://unexpected.example')
+    (repo / 'site.json').write_text(json.dumps({'feedback_url':'https://example.org?token=secret'}))
+    with pytest.raises(ValueError): build(repo)
+
+
+def test_legacy_build_marker_is_accepted_during_rename(art):
+    repo, source, meta, _ = art
+    export_artwork(repo, source, meta, True)
+    (repo / '_site').mkdir()
+    (repo / '_site/.image-dream-build').write_text('old build')
+    assert build(repo)['count'] == 1
+    assert (repo / '_site/.nightwork-build').exists()
