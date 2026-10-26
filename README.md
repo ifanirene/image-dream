@@ -1,6 +1,6 @@
 # Nightwork
 
-**What if you ran into your research in an art gallery?**
+**What if you ran into your own research in an art gallery?**
 
 Nightwork is a Codex plugin that creates imaginative visual art and a brief research note from the work you care about.
 
