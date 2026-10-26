@@ -1,0 +1,23 @@
+{
+  "ai_generated": true,
+  "date": "2026-10-26",
+  "id": "nightly-2026-10-26",
+  "image": {
+    "file": "artwork.png",
+    "height": 941,
+    "sha256": "0720e6d03626f52a1c7ac332fe49da07919c5e67ca257f49e6a58e702512fc5f",
+    "width": 1672
+  },
+  "kind": "nightly",
+  "research": {
+    "sources": [
+      {
+        "label": "Krolak et al., Cell — published online July 16, 2025",
+        "url": "https://doi.org/10.1016/j.cell.2025.06.030"
+      }
+    ],
+    "summary": "Yellow parasols unfold across a misty hillside, with distant echoes larger than their origin. Inspired by a mouse study in which arterial endothelial gap junctions help determine how quickly and how far vasodilation spreads after neural activity. Deleting Cx37 and Cx40 impaired distant propagation while local diving-arteriole responses remained. Conceptual art, not a depiction of anatomy."
+  },
+  "schema_version": 1,
+  "title": "A Gesture Travels"
+}
