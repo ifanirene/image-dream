@@ -1,0 +1,23 @@
+{
+  "ai_generated": true,
+  "date": "2026-10-29",
+  "id": "nightly-2026-10-29",
+  "image": {
+    "file": "artwork.png",
+    "height": 941,
+    "sha256": "162a87ec164718185d68af7be999bad1749f64f4bacf9f14087a0052e32714a1",
+    "width": 1672
+  },
+  "kind": "nightly",
+  "research": {
+    "sources": [
+      {
+        "label": "Suzuki et al., Communications Biology — August 22, 2026; Article in Press",
+        "url": "https://doi.org/10.1038/s42003-026-10823-7"
+      }
+    ],
+    "summary": "An ivory fox waits beside the unfinished end of a stair. Inspired by live imaging of adult mouse cortex under chronic hypoxia: microglial processes near growing capillary sprouts were associated with successful connections, and a representative sequence showed them withdrawing after the new vessel stabilized. The precise supporting mechanism remains unresolved. Conceptual art, not a depiction of anatomy."
+  },
+  "schema_version": 1,
+  "title": "Until It Holds"
+}
