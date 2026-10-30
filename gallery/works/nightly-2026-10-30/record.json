@@ -19,5 +19,6 @@
     "summary": "A new season of colour passes through a face that keeps its history. Inspired by experiments in cultured human fibroblasts: inducing the RNA-processing factor SRSF1 shifted ageing-related readouts while largely preserving tested fibroblast identity markers. The effects depended on induction timing and duration. Conceptual art, not evidence of rejuvenation in people."
   },
   "schema_version": 1,
-  "title": "A Different Season"
+  "title": "A Different Season",
+  "display": false
 }

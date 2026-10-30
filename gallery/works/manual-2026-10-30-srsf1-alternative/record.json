@@ -1,0 +1,23 @@
+{
+  "ai_generated": true,
+  "date": "2026-10-30",
+  "id": "manual-2026-10-30-srsf1-alternative",
+  "image": {
+    "file": "artwork.png",
+    "height": 941,
+    "sha256": "b1d1ebe08155d0fd26f8e4a554ba1de6cc995454477f1211c4491bf2ae5ad08c",
+    "width": 1672
+  },
+  "kind": "manual",
+  "research": {
+    "sources": [
+      {
+        "label": "Plesa et al., Nature Aging — October 14, 2026; published research",
+        "url": "https://doi.org/10.1038/s43587-026-01234-8"
+      }
+    ],
+    "summary": "An old boat carries a new weather in its sails. Inspired by experiments in cultured human fibroblasts: inducing SRSF1 shifted ageing-related readouts while largely preserving tested cell-identity markers. Effects depended on the timing and duration of induction. The boat and its weather are an artistic metaphor for change within a retained identity, not evidence of rejuvenation in people."
+  },
+  "schema_version": 1,
+  "title": "A Wind of Its Own"
+}
