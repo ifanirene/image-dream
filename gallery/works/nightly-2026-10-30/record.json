@@ -1,0 +1,23 @@
+{
+  "ai_generated": true,
+  "date": "2026-10-30",
+  "id": "nightly-2026-10-30",
+  "image": {
+    "file": "artwork.png",
+    "height": 941,
+    "sha256": "b970fe64739ca99c09ae11fb3739e3f74b8efc93c09d61b1543d18cf5261f33b",
+    "width": 1672
+  },
+  "kind": "nightly",
+  "research": {
+    "sources": [
+      {
+        "label": "Plesa et al., Nature Aging — October 14, 2026; published research",
+        "url": "https://doi.org/10.1038/s43587-026-01234-8"
+      }
+    ],
+    "summary": "A new season of colour passes through a face that keeps its history. Inspired by experiments in cultured human fibroblasts: inducing the RNA-processing factor SRSF1 shifted ageing-related readouts while largely preserving tested fibroblast identity markers. The effects depended on induction timing and duration. Conceptual art, not evidence of rejuvenation in people."
+  },
+  "schema_version": 1,
+  "title": "A Different Season"
+}
